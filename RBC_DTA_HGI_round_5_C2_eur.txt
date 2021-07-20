@@ -1,0 +1,2 @@
+exposure	samplesize.exposure	SNP	chr.exposure	pos.exposure	Gene	SD	effect_allele.exposure	other_allele.exposure	eaf.exposure	beta.exposure	se.exposure	pval.exposure	beta.outcome	se.outcome	pval.outcome
+DTA	2462	rs174535	11	61551356	C11orf9	0.11	T	C	0.65839	0.029	0.003	1.00e-200	-0.003	0.010	0.794

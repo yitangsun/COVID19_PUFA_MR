@@ -1,0 +1,2 @@
+exposure	samplesize.exposure	SNP	chr.exposure	pos.exposure	Gene	SD	effect_allele.exposure	other_allele.exposure	eaf.exposure	beta.exposure	se.exposure	pval.exposure	beta.outcome	se.outcome	pval.outcome
+DHA	8631	rs2236212	6	10995015	ELOVL2	0.89	G	C	0.569	0.113	0.014	1.30e-15	0.059	0.042	0.155

@@ -1,0 +1,4 @@
+exposure	samplesize.exposure	SNP	chr.exposure	pos.exposure	Gene	SD	effect_allele.exposure	other_allele.exposure	eaf.exposure	beta.exposure	se.exposure	pval.exposure	beta.outcome	se.outcome	pval.outcome
+LA	8631	rs10740118	10	65101207	JMJD1C	2.69	C	G	0.407725	-0.248	0.043	8.10e-09	 0.005	0.010	0.607
+LA	8631	rs174547	11	61570783	FADS1	2.69	C	T	0.33124	 1.474	0.042	1.00e-200	 0.004	0.010	0.697
+LA	8631	rs16966952	16	15135943	NTAN1	2.69	A	G	0.279871	-0.351	0.044	1.20e-15	-0.006	0.011	0.585

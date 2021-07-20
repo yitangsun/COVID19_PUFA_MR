@@ -1,0 +1,3 @@
+exposure	samplesize.exposure	SNP	chr.exposure	pos.exposure	Gene	SD	effect_allele.exposure	other_allele.exposure	eaf.exposure	beta.exposure	se.exposure	pval.exposure	beta.outcome	se.outcome	pval.outcome
+AA	8631	rs174547	11	61570783	FADS1	1.96	C	T	0.33124	-1.691	0.025	1.00e-200	 0.034	0.024	0.166
+AA	8631	rs16966952	16	15135943	NTAN1	1.96	A	G	0.279871	-0.199	0.031	2.40e-10	-0.028	0.030	0.353

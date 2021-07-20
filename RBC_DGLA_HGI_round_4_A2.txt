@@ -1,0 +1,3 @@
+exposure	samplesize.exposure	SNP	chr.exposure	pos.exposure	Gene	SD	effect_allele.exposure	other_allele.exposure	eaf.exposure	beta.exposure	se.exposure	pval.exposure	beta.outcome	se.outcome	pval.outcome
+DGLA	2462	rs509360	11	61548559	C11orf9	0.09	G	A	0.649	0.070	0.003	1.00e-200	-0.060	0.039	0.122
+DGLA	2462	rs2453710	11	61406542	RPLP0P2	0.09	A	G	0.58218	0.034	0.004	1.00e-200	 0.056	0.027	0.038

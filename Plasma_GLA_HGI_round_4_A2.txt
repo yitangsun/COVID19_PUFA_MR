@@ -1,0 +1,3 @@
+exposure	samplesize.exposure	SNP	chr.exposure	pos.exposure	Gene	SD	effect_allele.exposure	other_allele.exposure	eaf.exposure	beta.exposure	se.exposure	pval.exposure	beta.outcome	se.outcome	pval.outcome
+GLA	8631	rs174547	11	61570783	FADS1	0.06	C	T	0.33124	-0.016	0.001	2.30e-72	 0.021	0.030	0.467
+GLA	8631	rs16966952	16	15135943	PDXDC1	0.06	A	G	0.279871	-0.006	0.001	5.00e-11	-0.031	0.039	0.432

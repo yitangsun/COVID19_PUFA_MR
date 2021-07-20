@@ -1,0 +1,3 @@
+exposure	samplesize.exposure	SNP	chr.exposure	pos.exposure	Gene	SD	effect_allele.exposure	other_allele.exposure	eaf.exposure	beta.exposure	se.exposure	pval.exposure	beta.outcome	se.outcome	pval.outcome
+DPA-n3	2462	rs8523	6	10981053	ELOVL2	0.07	A	G	0.44465	0.011	0.002	3.20e-08	-0.022	0.031	0.472
+DPA-n3	2462	rs174549	11	61571382	FADS1	0.07	G	A	0.70775	0.012	0.002	2.60e-08	-0.071	0.034	0.035

@@ -1,0 +1,4 @@
+exposure	samplesize.exposure	SNP	chr.exposure	pos.exposure	Gene	SD	effect_allele.exposure	other_allele.exposure	eaf.exposure	beta.exposure	se.exposure	pval.exposure	beta.outcome	se.outcome	pval.outcome
+AA	2462	rs2581624	3	142633869		0.04	G	C	0.79336	0.010	0.002	8.30e-10	 0.004	0.032	0.913
+AA	2462	rs2072114	11	61605215	FADS2	0.04	A	G	0.8814	0.021	0.002	1.00e-200	-0.021	0.040	0.604
+AA	2462	rs2269928	11	61537529	C11orf9	0.04	T	G	0.77978	0.019	0.002	1.00e-200	-0.013	0.043	0.756
