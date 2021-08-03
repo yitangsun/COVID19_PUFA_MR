@@ -1,34 +1,29 @@
+# Load the packages for the Mendelian randomization (MR) analysis.
 library(TwoSampleMR)
 library(dplyr)
 '%ni%' <- Negate('%in%')
-# ieugwasr::api_status()
-# $`API version`
-# #3.6.7
-# $`Total associations`
-# [1] 126335269652
-# $`Total complete datasets`
-# [1] 34670
-# $`Total public datasets`
-# [1] 34513
-library(MRInstruments)
-library(MVMR)
-#library(SNPlocs.Hsapiens.dbSNP144.GRCh37)
-#library("SNPlocs.Hsapiens.dbSNP151.GRCh38")
 
+# Set the input directory. (@@@ Need to change.)
 Pathway_geno="/scratch/ys98038/UKB/plink2_format/COVID_19/Analyses/MR_result/result_PUFA_07_16/SNP/"
+
+# Set the output directory. (@@@ Need to change.)
 Pathway_out="/scratch/ys98038/UKB/plink2_format/COVID_19/Analyses/MR_result/result_PUFA_07_16/result/"
 
+# Covid-19 definitions from the Covid-19 host genetics initiative.
 COVID_LIST=c("HGI_round_4_A2","HGI_round_4_B1","HGI_round_4_B2","HGI_round_4_C2","HGI_round_5_A2_eur","HGI_round_5_B1_eur","HGI_round_5_B2_eur","HGI_round_5_C2_eur")
-#COVID_LIST=c("")
 
+# Create my MR function.
 My_MR <- function(exp_dat,outcome_dat) {
   rm(dat)
+  
+  # Combine the exposure and outcome informations.
   try(dat<- exp_dat %>% inner_join(outcome_dat, by= "SNP"), silent=TRUE)
   if (exists("dat")==TRUE && length(dat$SNP)>0) {
     dat$beta.exposure=dat$beta.exposure/dat$SD
     dat$se.exposure=dat$se.exposure/dat$SD
     dat$mr_keep=TRUE
     
+    # Apply the MR analysis.
     if (length(which(dat$mr_keep=='TRUE'))>2) {
       #Horizontal pleiotropy
       pleiotropy=mr_pleiotropy_test(dat)
@@ -53,6 +48,7 @@ My_MR <- function(exp_dat,outcome_dat) {
       final_res <- IVW_MRE
     }
     
+    # Merge the MR results.
     final_res$Test=n
     names(final_res)[names(final_res) == "method"] <- "Methods"
     names(final_res)[names(final_res) == "nsnp"] <- "nsnps"
@@ -171,7 +167,10 @@ My_MR <- function(exp_dat,outcome_dat) {
   }
 }
 
+# Set exposure and outcome datasets.
 for (n in COVID_LIST) {
+  
+  # Obtaining instruments of plasma PUFA.
   self_PLASMA_GWAS_id=c("ALA","LA", "GLA", "DGLA", "AA", "DPA-n3", "DHA")
   
   for (RBC_name in self_PLASMA_GWAS_id) {
@@ -206,6 +205,7 @@ for (n in COVID_LIST) {
       pop = "EUR"
     )
     
+    # Once instruments for the exposure trait have been specified, those variants need to be extracted from the outcome trait.
     outcomefile=paste(Pathway_geno,"Plasma_",RBC_name,"_",n, ".txt", sep="")
     ####### Change csv file
     outcome_dat=read_outcome_data(
@@ -234,6 +234,7 @@ for (n in COVID_LIST) {
     }
   }
   
+  # Obtaining instruments of red blood cell PUFA.
   RBC_GWAS_id=c("ALA","LA", "GLA", "DGLA", "AA", "DPA-n3", "DTA")
   
   for (RBC_name in RBC_GWAS_id) {
@@ -269,6 +270,7 @@ for (n in COVID_LIST) {
         pop = "EUR"
       )
       
+      # Once instruments for the exposure trait have been specified, those variants need to be extracted from the outcome trait.
       outcomefile=paste(Pathway_geno,"RBC_",RBC_name,"_",n, ".txt", sep="")
       ####### Change csv file
       outcome_dat=read_outcome_data(
