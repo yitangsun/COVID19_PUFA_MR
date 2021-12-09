@@ -1,7 +1,8 @@
-#  Dissecting causal effects of polyunsaturated fatty acids on COVID-19 susceptibility and severity: a Mendelian randomization study
+#  Circulating polyunsaturated fatty acids and COVID-19: a prospective cohort study and Mendelian randomization analysis
+
 (18th of June 2021)
 
-**Dissecting causal effects of polyunsaturated fatty acids on COVID-19 susceptibility and severity: a Mendelian randomization study**
+**Circulating polyunsaturated fatty acids and COVID-19: a prospective cohort study and Mendelian randomization analysis**
 is unpublished.
 
 ## Table of Contents
@@ -37,7 +38,7 @@ Please use the [Github Issue page](https://github.com/yitangsun/COVID19_PUFA_MR/
 
 To cite in publications, please use:
 
-Sun, Y.; Zhou, J.; Ye, K. Prioritizing causal risk factors for severe COVID-19: An exhaustive mendelian randomization study. Nat. Portf. 2021, preprint (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-149087/v1]
+
 
 ## License
 
